@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafene</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="root">
+            <div id="logo">
+                <a href="#">
+                    <img src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="logo" id="logo-img">
+                    <p id="logo-text">KafenePharma</p>
+                </a>
+            </div>
+            <nav>
+                <a href="orders/order.html" class="nav-link">Orders</a>
+                <a href="" class="nav-link">Products</a>
+                <a href="" class="nav-link">Users</a>
+            </nav>
+            <div id="logout">
+                <a href="" id="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- <main>
+        <div class="PageWrapper">
+            <h1 class="MainHeading">Orders</h1>
+            <div class="OrdersWrapper">
+                <div class="FilterWrapper">
+                    <h3>Filters</h3>
+                    <div class="FilterOptions">
+                        <p class="TotalCount">Count: 0</p>
+                        <label class="FilterCheckbox">
+                            <input type="checkbox" checked="true" name="orders-new" />
+                            New
+                        </label>
+                        <label class="FilterCheckbox">
+                            <input type="checkbox" checked="true" name="orders-packed" />
+                            Packed
+                        </label>
+                        <label class="FilterCheckbox">
+                            <input type="checkbox" checked="true" name="orders-transit" />
+                            InTransit
+                        </label>
+                        <label class="FilterCheckbox">
+                            <input type="checkbox" checked="true" name="orders-delivered" />
+                            Delivered
+                        </label>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <table class="OrderTable">
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                        <tbody id="tableBody">
+                            <!-- Table rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main> -->
+    <script src="order.js"></script>
+</body>
+</html>
