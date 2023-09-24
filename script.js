@@ -2,7 +2,7 @@ let user = "saisk";
 let pass = "saisk";
 
 $(document).ready(function () {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
     if (isLoggedIn === 'true') {
         // Redirect to the order page if logged in
@@ -17,10 +17,8 @@ $(document).ready(function () {
         if ((username !== user) && (pass !== password)) {
             alert('Please Enter Valid Credentials: ' + username + ' ' + password);
         } else {
-            // Save user details in localStorage
-            // localStorage.setItem('username', username);
-            localStorage.setItem('isLoggedIn', 'true');
-            console.log("Correct")
+            // Save user details in sessionStorage
+            sessionStorage.setItem('isLoggedIn', 'true');
             alert('Login Successful!');
             // Redirect to the home page (you may need to handle routing differently)
             window.location.href = 'orders/order.html';
