@@ -21,15 +21,28 @@ $("#logout-btn").click(function(){
 
 //Handling the Search Filter Function
 function handleFormSubmit(event) {
-    event.preventDefault();   
+    event.preventDefault();
+    const searchTerm = document.querySelector(".SearchBox").value.toLowerCase();
+
+    if (searchTerm.length >= 2) {
+        window.handleSearch(); 
+    } else {
+        alert('Please enter at least 2 characters for the search.');
+    }
 }
+
 window.handleSearch = function () {
     const searchTerm = document.querySelector(".SearchBox").value.toLowerCase();
+    console.log(searchTerm)
     const filteredUsers = usersData.filter(function (user) {
-      return user.fullName.toLowerCase().includes(searchTerm);
+        return user.fullName.toLowerCase().includes(searchTerm);
     });
-    renderTable(filteredUsers); // Render filtered data
-};
+    if(searchTerm.length > 1){
+        renderTable(filteredUsers);
+    }
+}
+
+
 // Handle the reset button click event
 window.handleReset = function () {
     document.querySelector(".SearchBox").value = ""; // Clear the search input
