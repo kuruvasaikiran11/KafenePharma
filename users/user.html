@@ -6,6 +6,7 @@
     <title>KafenePharma</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../orders/order.css" />
+    <link rel="stylesheet" href="user.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
@@ -23,8 +24,8 @@
         </div>
         <nav>
           <a href="../orders/order.html" class="nav-link">Orders</a>
-          <a href="product.html" class="nav-link">Products</a>
-          <a href="../users/user.html" class="nav-link">Users</a>
+          <a href="../products/product.html" class="nav-link">Products</a>
+          <a href="user.html" class="nav-link">Users</a>
         </nav>
         <div id="logout">
           <a href="" id="logout-btn">Logout</a>
@@ -32,40 +33,29 @@
       </div>
     </header>
     <main>
-      <div class="PageWrapper">
-        <h1 class="MainHeading">Products</h1>
+      <div id="" class="PageWrapper">
+        <h1 class="MainHeading">Users</h1>
         <div class="OrdersWrapper">
-          <div class="FilterWrapper">
-            <h3>Filters</h3>
-            <div class="FilterOptions">
-              <p class="TotalCount">Count: 0</p>
-              <label class="FilterCheckbox">
-                <input type="checkbox" checked="true" name="product-expired" />
-                Expired
-              </label>
-              <label class="FilterCheckbox">
-                <input type="checkbox" checked="true" name="product-low-stock"/>Low Stock
-              </label>
-            </div>
-          </div>
+            <form class="FilterWrapper" onsubmit="handleFormSubmit(event)">
+                <input onkeyup="handleSearch()" class="SearchBox" type="search" placeholder="Search by Name" />
+                <input type="reset" onclick="handleReset()" class="Button" value="Reset" />
+              </form>              
           <div style="width: 100%">
             <table class="OrderTable">
               <tr>
                 <th>ID</th>
-                <th>Product Name</th>
-                <th>Product Brand</th>
-                <th style="min-width: 100px">Expiry Date</th>
-                <th>Unit Price</th>
-                <th>Stock</th>
+                <th>User Avatar</th>
+                <th>Full Name</th>
+                <th style="min-width: 100px">DoB</th>
+                <th>Gender</th>
+                <th>Current Location</th>
               </tr>
-              <tbody id="tableBody">
-                <!-- Table rows will be added here -->
-              </tbody>
+              <tbody id="tableBody"></tbody>
             </table>
           </div>
         </div>
       </div>
     </main>
-    <script src="product.js"></script>
+    <script src="user.js"></script>
   </body>
 </html>

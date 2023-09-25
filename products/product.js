@@ -57,28 +57,55 @@ function renderTable() {
     $('.TotalCount').text(`Count: ${state.filteredList.length}`);
 } 
 
+// function updateFilter(type, value) {
+//     switch (type) {
+//       case 'expired':
+//         state.showExpired = value;
+//         break;
+//       case 'lowStock':
+//         state.showLowStock = value;
+//         break;
+//     }
+  
+//     // Update the filtered list based on the updated state variables.
+//     state.filteredList = state.productList.filter(function (item) {
+//       return (state.showExpired || !item.isExpired) && (!state.showLowStock || item.stock >= 100);
+//     });
+  
+//     // Render the table with the updated filtered list.
+//     renderTable();
+// }
+
+//   // Handle checkbox click events
+// $('.FilterCheckbox input').on('click', function () {
+//     const type = $(this).attr('name').replace('product-', '');
+//     const value = $(this).prop('checked');
+//     updateFilter(type, value);
+// });
+
 function updateFilter(type, value) {
     switch (type) {
-      case 'expired':
-        state.showExpired = value;
-        break;
-      case 'lowStock':
-        state.showLowStock = value;
-        break;
+        case 'expired':
+            state.showExpired = value;
+            break;
+        case 'low-stock':
+            state.showLowStock = value;
+            break;
     }
-  
+
     // Update the filtered list based on the updated state variables.
     state.filteredList = state.productList.filter(function (item) {
-      return (state.showExpired || !item.isExpired) && (!state.showLowStock || item.stock >= 100);
+        return (state.showExpired || !item.isExpired) && (state.showLowStock || item.stock >= 100);
     });
-  
+
     // Render the table with the updated filtered list.
     renderTable();
 }
 
-  // Handle checkbox click events
+// Handle checkbox click events
 $('.FilterCheckbox input').on('change', function () {
     const type = $(this).attr('name').replace('product-', '');
     const value = $(this).prop('checked');
     updateFilter(type, value);
 });
+
