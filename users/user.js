@@ -19,7 +19,7 @@ $("#logout-btn").click(function(){
 });
 
 
-//Handling the Filter Function
+//Handling the Search Filter Function
 function handleFormSubmit(event) {
     event.preventDefault();   
 }
