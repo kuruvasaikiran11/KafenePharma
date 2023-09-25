@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     if (isLoggedIn === 'true') {
         // Redirect to the order page if logged in
-        window.location.href = 'orders/order.html';
+        window.location.href = 'home.html';
     }
 
     $('.login').submit(function (e) {
@@ -21,7 +21,7 @@ $(document).ready(function () {
             sessionStorage.setItem('isLoggedIn', 'true');
             alert('Login Successful!');
             // Redirect to the home page (you may need to handle routing differently)
-            window.location.href = 'orders/order.html';
+            window.location.href = 'home.html';
         }
     });
 });

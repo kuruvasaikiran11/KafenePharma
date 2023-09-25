@@ -1,0 +1,25 @@
+main h1{
+    text-align: center;
+}
+
+.wrapper{
+    width: 50%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wrapper .menu-item a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(172, 164, 164);
+}
+
+.wrapper .menu-item a:hover{
+    background-color: rgb(44, 42, 42);
+    color: white;
+}
