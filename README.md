@@ -11,3 +11,6 @@ The Pharma Admin Panel is a web application that serves as the administrative in
 ## Demo
 
 You can check out the live demo https://kuruvasaikiran11.github.io/KafenePharma/
+You can try below default creds
+username : saisk
+password : saisk
